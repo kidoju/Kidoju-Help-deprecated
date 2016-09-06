@@ -10,11 +10,11 @@ This project is based on [Mozilla PDF.js](https://mozilla.github.io/pdf.js/)
 
 Upgrading pdf.JS consists in:
 
-1. [dowmloading PDF.js](from https://mozilla.github.io/pdf.js/getting_started/#download)
+1. [downloading PDF.js](https://mozilla.github.io/pdf.js/getting_started/#download)
 2. Copying the content to the ```build/``` and ```web/``` directories
 3. Generating the ```dist/``` and ```src/``` directories by running ```grunt``` 
 
-The only files that is not generated is ```src/main.js```:
+The only file that is not generated is ```src/main.js```:
 
 ```js
 require('../web/viewer.css');
