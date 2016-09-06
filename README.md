@@ -1,6 +1,6 @@
 # Kidoju-Help
 
-> "A help system based on Mozilla pdf.js for Kidoju
+> A help system based on Mozilla pdf.js for Kidoju
 
 ## Background
 
@@ -8,11 +8,11 @@ This project is based on [Mozilla PDF.js](https://mozilla.github.io/pdf.js/)
 
 ## Upgrade
 
-This project is based on:
+Upgrading pdf.JS consists in:
 
 1. [dowmloading PDF.js](from https://mozilla.github.io/pdf.js/getting_started/#download)
-2. Copying the content to ```build/``` and ```web/``` directories
-3. Generating the ```dist``` and ```src``` directories by running ```grunt``` 
+2. Copying the content to the ```build/``` and ```web/``` directories
+3. Generating the ```dist/``` and ```src/``` directories by running ```grunt``` 
 
 The only files that is not generated is ```src/main.js```:
 
@@ -29,7 +29,7 @@ require('./viewer.js');
 
 [pdfjs-dist](https://github.com/mozilla/pdfjs-dist) is generally more up-to-date than [PDF.js](https://github.com/mozilla/pdf.js).
 
-Therefore, it would be nice to use in ```src/main.js```
+Therefore, it would be nice to replace in ```src/main.js```:
 
 ```js
 ...
@@ -39,5 +39,5 @@ window.pdfjsDistBuildPdf = require('pdfjs-dist/web/pdf.js');
 ...
 ```
 
-Unfortunately all required files are not maintained within ```src/main.js```.
+Unfortunately all required files are not maintained within ```src/main.js```, especially ```viewer.html```, ```viewer.js``` and ```viewer.css```.
 
