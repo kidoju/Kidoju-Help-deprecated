@@ -52,7 +52,7 @@ module.exports = function (grunt) {
                 options: {
                     process: function (content, srcpath) {
                         return content
-                            .replace('compressed.tracemonkey-pldi-09.pdf', '../docs/User%20Guide.en.pdf?v=' + version)
+                            .replace('compressed.tracemonkey-pldi-09.pdf', '../docs/user-guide.en.pdf?v=' + version)
                             .replace('appConfig.toolbar.openFile.addEventListener(', '// appConfig.toolbar.openFile.addEventListener(')
                             .replace('  SecondaryToolbar.openFileClick.bind(', '//   SecondaryToolbar.openFileClick.bind(')
                             // .replace('./images/', './images/')
