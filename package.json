@@ -1,7 +1,7 @@
 {
   "name": "Kidoju.Help",
   "description": "A help system based on Mozilla pdf.js for Kidoju",
-  "version": "0.2.35",
+  "version": "0.2.36",
   "license": "SEE LICENSE IN https://github.com/mozilla/pdf.js/blob/master/LICENSE",
   "repository": "",
   "devDependencies": {
