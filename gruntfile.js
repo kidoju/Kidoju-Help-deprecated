@@ -13,6 +13,7 @@ module.exports = function (grunt) {
     var cheerio = require('cheerio');
     var webpack = require('webpack');
     var webpackConfig = require(__dirname + '/webpack.config.js');
+    var version = require('./package.json').version;
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -40,7 +41,7 @@ module.exports = function (grunt) {
                         $('head').find('script[src="../build/pdf.js"]').remove();
                         $('head').find('script[src="debugger.js"]').remove();
                         $('head').find('script[src="viewer.js"]').remove();
-                        $('head').append('<script src="./main.bundle.js?v=0.0.1" ></script>'); // TODO version from pkg
+                        $('head').append('<script src="./main.bundle.js?v=' + version + '" ></script>');
                         return $.html();
                     }
                 }
@@ -51,11 +52,11 @@ module.exports = function (grunt) {
                 options: {
                     process: function (content, srcpath) {
                         return content
-                            .replace('compressed.tracemonkey-pldi-09.pdf', '../docs/User%20Guide.en.pdf?v=0.0.1') // TODO version from pkg
+                            .replace('compressed.tracemonkey-pldi-09.pdf', '../docs/User%20Guide.en.pdf?v=' + version)
                             .replace('appConfig.toolbar.openFile.addEventListener(', '// appConfig.toolbar.openFile.addEventListener(')
                             .replace('  SecondaryToolbar.openFileClick.bind(', '//   SecondaryToolbar.openFileClick.bind(')
                             // .replace('./images/', './images/')
-                            .replace('../build/pdf.worker.js', './pdf.worker.bundle.js?v=0.0.1')
+                            .replace('../build/pdf.worker.js', './pdf.worker.bundle.js?v=' + version)
                             .replace('../web/cmaps/', './cmaps/');
                     }
                 }
