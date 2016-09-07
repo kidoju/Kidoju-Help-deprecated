@@ -32,7 +32,7 @@ module.exports = {
         ]
     },
     output: {
-        path: path.join(__dirname, './dist'),
+        path: path.join(__dirname, './viewer'),
         publicPath: './',
         filename: '[name].bundle.js?v=' + pkg.version,
         chunkFilename: 'pdf.worker.bundle.js?v=' + pkg.version

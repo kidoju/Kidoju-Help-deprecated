@@ -1,6 +1,6 @@
 # Kidoju-Help
 
-> A help system based on Mozilla pdf.js for Kidoju
+> A help system based on Mozilla PDF.js for Kidoju
 
 ## Background
 
@@ -8,11 +8,11 @@ This project is based on [Mozilla PDF.js](https://mozilla.github.io/pdf.js/)
 
 ## Upgrade
 
-Upgrading pdf.JS consists in:
+Upgrading PDF.js consists in:
 
 1. [downloading PDF.js](https://mozilla.github.io/pdf.js/getting_started/#download)
 2. Copying the content to the ```build/``` and ```web/``` directories
-3. Generating the ```dist/``` and ```src/``` directories by running ```grunt``` 
+3. Generating the ```viewer/``` and ```src/``` directories by running ```grunt``` 
 
 The only file that is not generated is ```src/main.js```:
 

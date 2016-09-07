@@ -17,19 +17,19 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: {
-            dist: ['./dist/*']
+            viewer: ['./viewer/*']
         },
         copy: {
-            dist: {
+            viewer: {
                 files: [
-                    { expand: true, cwd: 'web/cmaps', src: '**', dest: 'dist/cmaps' },
-                    { expand: true, cwd: 'web/images', src: '**', dest: 'dist/images' },
-                    { expand: true, cwd: 'web/locale', src: '**', dest: 'dist/locale' }
+                    { expand: true, cwd: 'web/cmaps', src: '**', dest: 'viewer/cmaps' },
+                    { expand: true, cwd: 'web/images', src: '**', dest: 'viewer/images' },
+                    { expand: true, cwd: 'web/locale', src: '**', dest: 'viewer/locale' }
                 ]
             },
             html: {
                 src: 'web/viewer.html',
-                dest: 'dist/viewer.html',
+                dest: 'viewer/index.html',
                 options: {
                     process: function (content, srcpath) {
                         var $ = cheerio.load(content);
