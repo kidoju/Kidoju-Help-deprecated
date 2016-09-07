@@ -3,7 +3,10 @@
   "description": "A help system based on Mozilla pdf.js for Kidoju",
   "version": "0.2.36",
   "license": "SEE LICENSE IN https://github.com/mozilla/pdf.js/blob/master/LICENSE",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kidoju/Kidoju-Help.git"
+  },
   "devDependencies": {
     "cheerio": "^0.22.0",
     "css-loader": "^0.25.0",
